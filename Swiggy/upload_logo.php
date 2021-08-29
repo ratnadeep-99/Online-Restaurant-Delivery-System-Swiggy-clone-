@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn=mysqli_connect("localhost","root","","swiggy_prac");
+$conn=mysqli_connect("sql212.epizy.com","epiz_29386857","CiF2lMeHtN7","epiz_29386857_swiggy");
 $name=$_FILES['pic']['name'];
 $r_id=$_SESSION['r_id'];
 $path="http://localhost/Swiggy/uploads/".$_FILES['pic']['name'];

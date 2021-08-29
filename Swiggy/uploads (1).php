@@ -1,0 +1,21 @@
+<?php
+    session_start();
+    $conn=mysqli_connect("sql212.epizy.com","epiz_29386857","CiF2lMeHtN7","epiz_29386857_swiggy");
+    $name=$_FILES['pic']['name'];
+    $user_id=$_SESSION['user_id'];
+    $path="http://restaurantdeliverysys.freecluster.eu/uploads/".$name;
+    $allowed=array('jpg','jpeg','png','JPG','JPEG','PNG','jfif');
+    $pos=strpos($name,'.');
+    $ext=substr($name,$pos+1);
+    if(in_array($ext,$allowed))
+    {
+      $query="UPDATE users SET `img`='$path' WHERE `user_id`=$user_id";
+      mysqli_query($conn,$query);
+      move_uploaded_file($_FILES['pic']['tmp_name'],"./uploads/".$name);
+      header("Location:profile.php");
+    }
+    else
+    {
+      header("Location:http://restaurantdeliverysys.freecluster.eu/uploads_error.php");
+    }
+ ?>

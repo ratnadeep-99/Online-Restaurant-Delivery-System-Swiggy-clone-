@@ -1,5 +1,5 @@
 <?php
-  $conn=mysqli_connect("localhost","root","","swiggy_prac");
+  $conn=mysqli_connect("sql212.epizy.com","epiz_29386857","CiF2lMeHtN7","epiz_29386857_swiggy");
   $rating=$_POST['rating'];
   $review=$_POST['review'];
   $order_id=$_POST['order_id'];

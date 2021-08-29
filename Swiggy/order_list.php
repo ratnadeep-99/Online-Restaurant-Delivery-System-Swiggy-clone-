@@ -1,5 +1,5 @@
 <?php
-    $conn=mysqli_connect("localhost","root","","swiggy_prac");
+    $conn=mysqli_connect("sql212.epizy.com","epiz_29386857","CiF2lMeHtN7","epiz_29386857_swiggy");
     $order_id=$_POST['order_id'];
     $query="SELECT * FROM order_details o JOIN menu m ON o.menu_id=m.id WHERE o.order_id='$order_id'";
     $result=mysqli_query($conn,$query);

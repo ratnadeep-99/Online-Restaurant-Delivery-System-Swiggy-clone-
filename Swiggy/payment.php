@@ -1,5 +1,5 @@
 <?php
-  $conn=mysqli_connect("localhost","root","","swiggy_prac");
+  $conn=mysqli_connect("sql212.epizy.com","epiz_29386857","CiF2lMeHtN7","epiz_29386857_swiggy");
   $order_id=$_GET['order_id'];
   $amt=$_GET['amount'];
   $query="UPDATE orders SET amount='$amt',status=1 WHERE order_id='$order_id' ";

@@ -2,6 +2,8 @@
   background: #fc4a1a;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  opacity : 0.8;
+  filter : alpha(opacity = 80);
 }
 .jumbo-order-bg{
   background: #000000;  /* fallback for old browsers */
@@ -25,7 +27,7 @@
 
 }
 #bg-img{
-  background-image: url("https://www.ecopetit.cat/wpic/mpic/19-191863_2048x1352-amazing-food-desktop-wallpaper-full-size-restaurant.jpg");
+  background-image: url("https://i.pinimg.com/originals/f0/b6/15/f0b615f78dd809d68ec389f4bc8d94bb.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -webkit-background-size: cover;

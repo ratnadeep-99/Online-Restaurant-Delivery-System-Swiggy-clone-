@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $conn=mysqli_connect("localhost","root","","swiggy_prac");
+  $conn=mysqli_connect("sql212.epizy.com","epiz_29386857","CiF2lMeHtN7","epiz_29386857_swiggy");
   $user_id=$_SESSION['user_id'];
   $r_id=$_POST['r_id'];
   $flag=$_POST['flag'];
@@ -9,12 +9,12 @@
   if($flag==0)
   {
     $order_id=uniqid();
-    $query="INSERT INTO orders (order_id,user_id,r_id,order_time,status) VALUES ('$order_id',$user_id,$r_id,current_timestamp(),0) ";
+    $query="INSERT INTO orders (order_id,user_id,r_id,order_time,status) VALUES ('$order_id',$user_id,$r_id,current_timestamp(),0)";
     $query2="INSERT INTO order_details (menu_id,order_id,id,qty) VALUES ($menu_id,'$order_id',NULL,$qty)";
     try{
       mysqli_query($conn,$query);
       mysqli_query($conn,$query2);
-      $response=array('response'=>1,'order_id'=>$order_id,'qty'=>$qty);
+      $response=array('response'=>1,'order_id'=>$order_id,'qty'=>$qty, 'cts => "current_timestamp()"');
     }
     catch(Exception $e){
       $response=array('response'=>0);

@@ -4,7 +4,7 @@
   {
     header("Location:restaurant_login.php");
   }
-  $conn=mysqli_connect("localhost","root","","swiggy_prac");
+  $conn=mysqli_connect("sql212.epizy.com","epiz_29386857","CiF2lMeHtN7","epiz_29386857_swiggy");
   $r_id=$_SESSION['r_id'];
   $query="SELECT * FROM orders WHERE r_id=$r_id AND status=1";
   $result=mysqli_query($conn,$query);
@@ -16,18 +16,7 @@
   $query4="SELECT * FROM orders o JOIN users u ON u.user_id=o.user_id WHERE r_id=$r_id AND delivery_status=0 AND status=1";
   $result4=mysqli_query($conn,$query4);
  ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome To Swiggy</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="login_prac_style.css"/>
-    <script
-    src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-    crossorigin="anonymous"></script>	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </head>
+<?php include 'header1.php'?>
   <script>
   $(document).ready(function(){
     $('.order_id').click(function(){
@@ -71,8 +60,8 @@
   });
   </script>
   <body id="bg-img">
-    <nav class=" navbar navbar-color " style="padding-left:75px;padding-right:15px;padding-bottom: 15px;">
-      <h3 class="text-light">Swiggy</h3>
+    <nav class=" navbar navbar-color " style="padding-left:15px;padding-right:15px;padding-bottom: 5px;">
+     <a href="index.php"><h2 class="text-light navbar-brand" style = "font-size : 30px" >Swiggy</h2></a>
       <span style="float:right" class="lead text-light">Welcome <?php echo $_SESSION['r_name']; ?> Admin</span>
       <a href="logout.php" class="btn btn-light">Logout</a>
     </nav>
@@ -321,6 +310,6 @@
         </div>
       </div>
     </div>
-
+    <?php include 'footer1.php';?>
   </body>
 </html>

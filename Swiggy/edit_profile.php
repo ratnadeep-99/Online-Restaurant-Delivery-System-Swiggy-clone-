@@ -1,5 +1,5 @@
 <?php
-  $conn=mysqli_connect("localhost","root","","swiggy_prac");
+  $conn=mysqli_connect("sql212.epizy.com","epiz_29386857","CiF2lMeHtN7","epiz_29386857_swiggy");
   $name=$_POST['name'];
   $email=$_POST['email'];
   $pass=md5($_POST['password']);
